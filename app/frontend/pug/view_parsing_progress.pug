@@ -1,0 +1,33 @@
+section#view-progress
+    img#btn-cancel(
+        src=static('img/delete.svg')
+        width='24' 
+        heiht='24'
+    )
+
+    .carousel#pages-carousel(class='slide' data-ride='carousel' data-interval='false')
+        .carousel-inner(role='listbox')
+            template
+                .parsing
+                    h3.url(class='text-center')
+                    .progress
+                        .progress-bar
+                            span.status
+                    .result
+                        img.first-img
+                        table
+                            tr 
+                                td Title:
+                                td.title
+                            tr
+                                td First header: 
+                                td.first-h1 
+
+    nav(class='col-lg-2 col-lg-offset-5' aria-label='Page navigation')
+      ul.pagination
+        li
+            a(data-page='prev' aria-label='Previous')
+                span(aria-hidden='true') &laquo;
+        li
+            a(data-page='next' aria-label='Next')
+                span(aria-hidden='true') &raquo;

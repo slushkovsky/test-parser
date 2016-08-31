@@ -1,0 +1,44 @@
+include ./_static.pug
+
+- var BOWER = 'components/'
+
+//- Base mixins  
+
+mixin js(path)
+    script(type='text/javascript' src=static(path))
+
+mixin css(path)
+    link(rel='stylesheet' href=static(path))
+
+
+//- Bower mixins 
+
+mixin bower_css(path)
+    +css(BOWER + path)
+    
+mixin bower_js(path)
+    +js(BOWER + path)
+
+
+//- Bower packages presets 
+
+mixin bower_pkg(pkg_name)
+    case pkg_name
+        when 'bootstrap'
+            +bower_css('bootstrap/dist/css/bootstrap.min.css')
+            +bower_js('bootstrap/dist/js/bootstrap.min.js')
+
+        when 'moment'
+            +bower_js('moment/moment.js')
+
+        when 'eonasdan-bootstrap-datetimepicker'
+            +bower_pkg('moment')
+            +bower_css('eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css')
+            +bower_js('eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js')
+
+        when 'jquery'
+            +bower_js('jquery/dist/jquery.min.js')
+
+
+        
+        

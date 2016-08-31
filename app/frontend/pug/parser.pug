@@ -1,0 +1,20 @@
+extends ./_layout.pug
+
+block deps
+    +bower_pkg('eonasdan-bootstrap-datetimepicker')
+
+    +css('parser.css')
+    +js('session.js')
+    +js('view_inputs.js')
+    +js('view_parsing_progress.js')
+    +js('views.js')
+    +js('parser.js')
+
+block content
+    header
+        h1.text-center Parser
+
+    include ./view_inputs.pug
+    include ./view_parsing_progress.pug
+
+

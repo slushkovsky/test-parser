@@ -1,0 +1,42 @@
+section#view-inputs
+    #urls-widget(class='col-lg-6')
+        .row#urls-listview
+            #table-wrapper
+                table.table#urls-table
+                    template
+                        tr.url-row
+                            td 
+                                img.btn-del-site(
+                                    src=static('img/delete.svg')
+                                    width='16' 
+                                    heiht='16'
+                                )
+                            td.url
+                            
+        .row
+            #inputs-wrapper
+                .input-group
+                    input.form-control(
+                        type='text' 
+                        name='url' 
+                        placeholder='http://your-url.com'
+                    )
+
+                    span.input-group-btn
+                        button.btn#btn-add(class='btn-default') Add
+
+    #process-controls(class='col-lg-6')
+        .row 
+            .form-group        
+                .row
+                    #datetimepicker
+
+        .row 
+            button.btn#btn-process-sync(
+                class='btn-default col-lg-3 col-lg-offset-3'
+            ) Process now
+            button.btn#btn-process-async(
+                class='btn-default col-lg-3'
+            ) Process late
+
+

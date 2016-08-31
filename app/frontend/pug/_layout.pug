@@ -1,0 +1,19 @@
+include ./_dependencies.pug
+
+doctype html
+
+head
+    meta(charset='utf-8')
+
+    block title
+        title Parser
+
+    +bower_pkg('jquery')
+    +bower_pkg('bootstrap')
+
+    block deps
+
+body.container
+    block content
+
+
