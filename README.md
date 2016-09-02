@@ -9,12 +9,12 @@ Run: `docker run -d -p 5000:5000 parser`
 
 ## Manual
 
-### Build 
+**Build** 
 
 1. `virtualenv -p python3 venv && ./venv/bin/pip3 install -r requirements.txt`
 2. `cd app/frontend && npm install && gulp build`
 
-### Run 
+**Run** 
 
 1. `python3 manage.py runserver`
 2. `celery -A app/parser worker`
